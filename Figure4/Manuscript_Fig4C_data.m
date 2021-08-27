@@ -1,6 +1,7 @@
 %% Get coordinates of saddle nodes as in Fig 2A
 clear;clc
-run ..\Figure2\Manuscript_Fig2
+run ..\Figure2\Manuscript_Fig2A
+close
 %% Import data for each bifurcation diagram obtained from varying parameters
 cd rawdata_1p_parsent
 myfolder = dir('*.txt');

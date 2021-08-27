@@ -1,7 +1,8 @@
 
 %% Get coordinates of saddle nodes as in Fig 2A
 clear;clc
-run ..\Figure2\Manuscript_Fig2
+run ..\Figure2\Manuscript_Fig2A
+close
 %% Import data for each bifurcation diagram obtained from varying parameters
 cd rawdata_1p_parsent
 myfolder = dir('*.txt');
@@ -81,17 +82,8 @@ xlabel('SN1');
 ylabel('SN4');
 box on;
 
-%% Save Figures
-cd ..\..\FinalizedFigures
-saveas(fig(2), strcat("SN2 vs SN3_Fig4A",".png"));
-saveas(fig(3), strcat("SN1 vs SN4_Fig4B",".png"));
-
-cd SVG_files
-saveas(fig(2), strcat("SN2 vs SN3_Fig4A",".svg"));
-saveas(fig(3), strcat("SN1 vs SN4_Fig4B",".svg"));
-
-cd ..\..\Figure4
-
+cd ..
+ 
 %% Functions
 % Function below finds the saddle nodes of the bifurcation diagrams
 function Coord = findchange(file)

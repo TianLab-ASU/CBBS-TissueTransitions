@@ -64,22 +64,4 @@ for i=1:length(Conc)
     % Change renderer for appropriate export to SVG
     set(gcf, 'Renderer', 'painters') 
 end
-
-
-% %% Save Figures
-% cd ..\FinalizedFigures
-% 
-% saveas(figure(1), 'StochSim_TimeC_kYTup0-'+string(kYTup0(1))+'_SIFig2.png')
-% saveas(figure(2), 'StochSim_TimeC_kYTup0-'+string(kYTup0(2))+'_SIFig2.png')
-% saveas(figure(3), 'StochSim_TimeC_kYTup0-'+string(kYTup0(3))+'_SIFig2.png')
-% saveas(figure(4), 'StochSim_TimeC_kYTup0-'+string(kYTup0(4))+'_SIFig2.png')
-% saveas(figure(5), 'StochSim_TimeC_kYTup0-'+string(kYTup0(5))+'_SIFig2.png')
-% 
-% cd SVG_Files
-% saveas(figure(1), 'StochSim_TimeC_kYTup0-'+string(kYTup0(1))+'_SIFig2.svg')
-% saveas(figure(2), 'StochSim_TimeC_kYTup0-'+string(kYTup0(2))+'_SIFig2.svg')
-% saveas(figure(3), 'StochSim_TimeC_kYTup0-'+string(kYTup0(3))+'_SIFig2.svg')
-% saveas(figure(4), 'StochSim_TimeC_kYTup0-'+string(kYTup0(4))+'_SIFig2.svg')
-% saveas(figure(5), 'StochSim_TimeC_kYTup0-'+string(kYTup0(5))+'_SIFig2.svg')
-% 
-% cd ..\..\Figure5
+ 

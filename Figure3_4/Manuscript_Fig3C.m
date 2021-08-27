@@ -50,17 +50,8 @@ for i = 1:length(kYTup3)
 %     ran34(i) = abs(pts(1,3)-pts(1,4));
 %     ranhomeo(i) = abs(pts(1,1)-pts(1,4));
 end
-% ranhomeo(end)-ranhomeo(4)
-%% Save Figures
-% Uncomment following lines in code to save figures
-% cd ..\..\FinalizedFigures
-% saveas(fig1, strcat("Effect of NFBL_Fig3C",".png"));
-%  
-% cd SVG_files
-% saveas(fig1, strcat("Effect of NFBL_Fig3C",".svg"));
-% 
-% cd ..\..\Figure3_4
-
+cd ../../Figure3_4
+% ranhomeo(end)-ranhomeo(4) 
 %% Functions
 % Function below finds the saddle nodes of the bifurcation diagrams
 function Coord = findchange(file)

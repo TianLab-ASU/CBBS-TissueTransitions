@@ -1,6 +1,10 @@
 function [t,X]=TauLeapWendy_Hippo(DefineReactions,tspan, IC, RelTol, params)
+%Based on TauLeapWendy.m
+%(https://faculty.washington.edu/wendyt/DSDEtauleap.m)
+%which is created by Wendy Thomas at University of Washington 
+
 %Tau Leap Algorithm for chemical reaction equations
- 
+
 % S = stoichiometry of C substrates in R reactions
 % P = stoichiometry of products
 % K = vector of reaction rates

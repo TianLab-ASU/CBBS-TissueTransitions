@@ -7,7 +7,7 @@
 %% Get kYTup0 value for Fig 3A
 % kYTup0 is in the middle of the monostable homeostatic region
 clc;clear;close all
-run ..\Figure2\Manuscript_Fig2
+run ..\Figure2\Manuscript_Fig2A
 clearvars -except kYTup0_1 pts ;close all;clc
 
 Para2 
@@ -49,7 +49,7 @@ xlabel('[L]')
 
 %% Plot examples of trajectories from different starting points 
 % Create meshgrid to use for streamline
-[L1 YTup1] = meshgrid(0:0.01:3,0:0.01:3);
+[L1, YTup1] = meshgrid(0:0.01:3,0:0.01:3);
 N1= (kN1+kN2*YTup1.^n./(YTup1.^n+JN^n))/kN3;
 S1 = (kS1+kS2*YTup1.^n./(YTup1.^n+JS^n))/kS3;
 
@@ -111,7 +111,7 @@ ylabel('[YT_u_p]')
 xlabel('[L]')
 %% Plot examples of trajectories from different starting points 
 % Create meshgrid to use for streamline
-[L1 YTup1] = meshgrid(0:0.01:3,0:0.01:3);
+[L1, YTup1] = meshgrid(0:0.01:3,0:0.01:3);
 N1= (kN1+kN2*YTup1.^n./(YTup1.^n+JN^n))/kN3;
 S1 = (kS1+kS2*YTup1.^n./(YTup1.^n+JS^n))/kS3;
 
@@ -172,7 +172,7 @@ xlabel('[L]')
 
 %% Plot examples of trajectories from different starting points 
 % Create meshgrid to use for streamline
-[L1 YTup1] = meshgrid(0:0.01:3,0:0.01:3);
+[L1, YTup1] = meshgrid(0:0.01:3,0:0.01:3);
 N1= (kN1+kN2*YTup1.^n./(YTup1.^n+JN^n))/kN3;
 S1 = (kS1+kS2*YTup1.^n./(YTup1.^n+JS^n))/kS3;
 
@@ -197,15 +197,4 @@ g(3) = plot(startx, starty, 'ko', 'MarkerFaceColor', 'k', 'MarkerSize', 2.5);
 legend([g(1), g(2), g(3)], '[L]-nullcline', '[YT_u_p]-nullcline', 'Trajectories','Location', 'northeast')
 
 
-%% Save Figures
-cd ..\FinalizedFigures 
-saveas(f(1), 'Nullclines_H_Fig3A.png');
-saveas(f(2), 'Nullclines_1stSwitch_Fig2B.png');
-saveas(f(3), 'Nullclines_2ndSwitch_Fig2C.png');
-
-cd SVG_files
-saveas(f(1), 'Nullclines_H_Fig3A.svg');
-saveas(f(2), 'Nullclines_1stSwitch_Fig2B.svg');
-saveas(f(3), 'Nullclines_2ndSwitch_Fig2C.svg');
-
-cd ..\..\Figure3
+ 

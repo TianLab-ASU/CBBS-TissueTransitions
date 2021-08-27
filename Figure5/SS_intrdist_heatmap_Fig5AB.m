@@ -92,15 +92,4 @@ set(gcf, 'Position', [100 50 1750 350])
 cb.Label.String = 'Cell Count';
 cb. Label.FontSize = 12;
 
-%% Save Files
-cd ..\FinalizedFigures
-saveas(fig(1), 'SS_YTupdist_.00extrN_Fig5B1.png')
-saveas(fig(2), 'YTupvS_heatmap_intrsim_Fig5A.png')
-saveas(fig(3), 'YTupvN_heatmap_intrsim_Fig5A.png')
-
-cd SVG_files
-saveas(fig(1), 'SS_YTupdist_.00extrN_Fig5B1.svg')
-saveas(fig(2), 'YTupvS_heatmap_intrsim_Fig5A.svg')
-saveas(fig(3), 'YTupvN_heatmap_intrsim_Fig5A.svg')
-
-cd ../../Figure5
+ 

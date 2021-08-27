@@ -6,7 +6,7 @@
 %% Get kYTUp0 value for Fig 3B
 clear;clc;
 
-run ..\Figure2\Manuscript_Fig2
+run ..\Figure2\Manuscript_Fig2A
 clearvars -except pts
 global kYTup0
 kYTup0 = (pts(1,1)+pts(1,4))/2;
@@ -38,12 +38,5 @@ xlabel('Time')
 ylabel('[YT_u_p]')
 legend
 h = figure(1);
-%% Save figures
-% Uncomment following lines in code to save figures
-% cd ..\FinalizedFigures
-% saveas(h, strcat("YAPSim_Fig3B",".png"));
-% 
-% cd SVG_files
-% saveas(h, strcat("YAPSim_Fig3B",".svg"));
-% cd ..\..\Figure3
+ 
 

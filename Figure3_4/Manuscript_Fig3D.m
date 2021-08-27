@@ -6,7 +6,7 @@
 % as kYTup3.
 %% Code for 2-parameter bifurcation analyses of SN2 and SN4
 % Run following script to get coordinates of saddle nodes in Fig 2A
-run ..\Figure2\Manuscript_Fig2
+run ..\Figure2\Manuscript_Fig2A
 clc;clearvars -except pts;close all;
 pts1 = [pts(1,1),1;pts(1,4),1];
 
@@ -59,24 +59,15 @@ legend('SN2', 'SN4')
  
 xlim([.85 1.15])
 ylim([0 .02])
-%% Save Figures
-cd ..\FinalizedFigures
-saveas(w, strcat(mainpar,"vs", SN2{2,1},"_Fig3D",".png")); %y vs x.png
-
-cd SVG_files
-saveas(w, strcat(mainpar,"vs", SN2{2,1},"_Fig3D",".svg")); %y vs x.png
-cd ..\..\Figure3_4
+ 
 %% Functions
 % Read contents of folder(data and file name)
 function C = readcontents(folder)
     e = struct2cell(folder)';
-    k = 1;
-
+    k = 1; 
     array = importdata(e{k,1}); 
     C{1,k} = array;
     %Use filename to get parameter used for 2-parameter bifurcation 
     C{2,k} = convertCharsToStrings(e{k,1}); 
-    C{2,k} = erase(C{2,k},'.txt');
-
-
+    C{2,k} = erase(C{2,k},'.txt'); 
 end

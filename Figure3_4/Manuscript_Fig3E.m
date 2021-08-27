@@ -4,7 +4,7 @@
 % tristable range due to a variation in kYTup3. This data was exported from
 % Oscill8 is within the "NFL-bifurcationdata" folder
 
-This script generates Fig 3E as seen in the manuscript. The figure include the [L]- and [YTup]-nullclines but with different values 
+% This script generates Fig 3E as seen in the manuscript. The figure include the [L]- and [YTup]-nullclines but with different values 
 % of kYTup0. The script to generate Fig 2A is ran to obtain the coordinates 
 % of the saddle nodes, which are later used to determine the specific 
 % kYTup0 values for each figure
@@ -57,16 +57,6 @@ ylim([0 3])
 ylabel('[YT_u_p]')
 xlabel('[L]')
 legend([g(1) g(2)], '[L]-nullcline', '[YT_u_p-nullcline]')
-
-
-%% Save figure
-% cd ..\FinalizedFigures
-% saveas(f(1), "Nullclines_Tristability_Fig3E.png")
-% 
-% cd SVG_files
-% saveas(f(1), "Nullclines_Tristability_Fig3E.svg")
-% 
-% cd ..\..\Figure3_4
 
 %% Functions 
 
