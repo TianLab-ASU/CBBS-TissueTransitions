@@ -1,3 +1,4 @@
+% This file contains the functions used to solve the reduced 2-ODE system.
 function dy = Hippo_Null_ODE(t,y)
 global n
 global kL1 kL2 JL kL3

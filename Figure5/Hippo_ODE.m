@@ -1,4 +1,4 @@
-
+% This file contains the functions used to solve the 5-ODE system.
 function [dy] = Hippo_ODE(~,y,kYTup0)
 
 global n

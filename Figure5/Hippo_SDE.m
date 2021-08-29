@@ -1,3 +1,7 @@
+% This file defines variables used for the stochastic simulations. It
+% is required for the function "TauLeapWendy_Hippo.m" to run.
+
+% This function needs a specific value of kYTup0 for it to run.
 function [S1, P, K] = Hippo_SDE(t,y,kYTup0)
 
 global n 

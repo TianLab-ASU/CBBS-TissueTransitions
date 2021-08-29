@@ -1,4 +1,4 @@
-
+% This file defines the parameters and their values for our model.
 
 global n
 global kL1 kL2 JL kL3
