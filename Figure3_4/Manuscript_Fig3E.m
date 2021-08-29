@@ -1,13 +1,9 @@
 % This script generates Fig 3E as seen in the manuscript. The figure plots
 % the [L]- and [YTup]-nullclines when kYTup0 is within a tristable range.
-% The script requires the 1-p bifurcation data when kYTup0 is within a
-% tristable range due to a variation in kYTup3. This data was exported from
-% Oscill8 is within the "NFL-bifurcationdata" folder
 
-% This script generates Fig 3E as seen in the manuscript. The figure include the [L]- and [YTup]-nullclines but with different values 
-% of kYTup0. The script to generate Fig 2A is ran to obtain the coordinates 
-% of the saddle nodes, which are later used to determine the specific 
-% kYTup0 values for each figure
+% The script requires the 1-parameter bifurcation data when kYTup0 is within a
+% tristable range due to a variation in kYTup3. This data exported from
+% Oscill8 is within the "NFL-bifurcationdata" folder.
 
 %% Get data for Fig 3E
 % Data is obtained when there is a tristable region as observed in Fig 3C
@@ -21,8 +17,8 @@ Para2
 cd ..\..\Figure3_4
 global kYTup0
 %% Plot Nullcline when tristable region is present
-% Use kYTup0 value between SN1 and SN4
-kYTup0 =(pts(1,4)-pts(1,1))/2+pts(1,1);  % kYTup0 between SN1 and SN4
+% Use kYTup0 value between SN2 and SN4
+kYTup0 =(pts(1,4)-pts(1,1))/2+pts(1,1);  % kYTup0 between SN2 and SN4
 kYTup3 = 0.85*kYTup3;  % kYTup3 is 85% of its standard parameter set value
 
 %% Plot Fig 3A
@@ -57,9 +53,9 @@ ylim([0 3])
 ylabel('[YT_u_p]')
 xlabel('[L]')
 legend([g(1) g(2)], '[L]-nullcline', '[YT_u_p-nullcline]')
-
+title('Figure 3E')
 %% Functions 
-
+% Function below finds the saddle nodes of the bifurcation diagrams
 function Coord = findchange(file)
 pos = file(:,1);
 x = file(:,4);

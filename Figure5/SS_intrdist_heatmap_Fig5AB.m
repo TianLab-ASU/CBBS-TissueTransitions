@@ -1,5 +1,11 @@
-% This script generates Fig 5A and 5B. It uses data obtained from running
-% the stochastic simulations with intrinsic noise
+% This script generates both panels Fig 5A and the first panel in Fig 5B.
+% The panels in Fig 5A show heatmaps to display the stochastic transitions 
+% of cells from the homeostatic state to the degenerative or tumorigenic state. 
+% The first panel in Fig 5B displays the distribution of YTup from 1000
+% stochastic simulations with only intrinsic noise. 
+
+% The script requires data obtained from running simulations with the
+% Tau-leap-based Gillespie algorithm, to include intrinsic noise.
 %% Load Intrinsic Simulations Data
 load('intr_100_2500_1000cells_r_allcorrect.mat')
 Conc_intr = Conc;
@@ -65,7 +71,7 @@ set(gcf, 'Position', [100 450 1750 350])
 
 % caxis([0 max(max(N))])
 cb.Label.String = 'Cell Count';
-cb. Label.FontSize = 12;
+cb.Label.FontSize = 12;
 
 %% Heatmap for YTup vs N
 % Create grid
@@ -90,6 +96,6 @@ set(gcf, 'Position', [100 50 1750 350])
 
 
 cb.Label.String = 'Cell Count';
-cb. Label.FontSize = 12;
+cb.Label.FontSize = 12;
 
  

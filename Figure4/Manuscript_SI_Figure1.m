@@ -1,3 +1,12 @@
+% This script generates Figure 1 in the Supplementary Material. This figure
+% plots the [L]- and [YTup]-nullclines with a specific value of kYTup0 and
+% decreased value of kYTup3 to display tristability.
+
+% The script requires 1-parameter bifurcation data from Oscill8, where
+% kYTup0 was used as the bifurcation parameter. This data is obtained 
+% when the value of kYTup3 was decreased by 15% from its original value 
+% in the standard parameter set. 
+
 %% Import data for 1-p bifurcation diagram where JN was decreased by 15%
 clear;clc;close all
 cd rawdata_1p_parsent
@@ -42,7 +51,7 @@ range = pts(1,4)-pts(1,1);
 kYTup0_1 = pts(1,1)+range/2;
 
 legend([d1, h1, t1],'Degeneration', 'Homeostasis','Tumorigenesis','Location','best')
- 
+title('SI-Figure 1')
 %% Functions
 function Coord = findchange(file)
 pos = file(:,1);

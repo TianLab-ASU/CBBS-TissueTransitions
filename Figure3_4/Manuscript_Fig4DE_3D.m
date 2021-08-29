@@ -1,10 +1,16 @@
-% This script generates Figures 4D, 4E, and 3D in the manuscript. This
-% script requires the coordinates of the saddle nodes, thus the script for
-% Fig 2A was run. In addition, this script requires the 2-parameter
-% bifurcation data for saddle nodes(SNs) 1 and 3 exported from Oscill8. This
-% script also generates 2-parameter bifurcation diagrams for SNs1 and 2 for
-% every parameter chosen as 2nd bifurcation parameter
-%% Code for 2-parameter bifurcation analyses of SN2 and SN4
+% This script generates Figures 4D, 4E, and 3D in the manuscript. The
+% 2-parameter bifurcation diagram for SN2 and SN4 plotted in Fig 3D has 
+% kYTup0 as the 1st bifurcation parameter and kYTup3 as the 2nd bifurcation
+% parameter. Figs 4D and 4E have kS2 and kN2 as their 2nd bifurcation
+% parameter, respectively, and both have kYTup0 as their first bifurcation
+% parameter. 
+
+% This script requires the coordinates of the saddle nodes, thus the script for
+% Fig 2A was run. It requires the 2-parameter bifurcation data for saddle 
+% nodes(SNs) 1 and 3 exported from Oscill8. The Excel tables imported
+% contains the indices used to plot specific sections of the 2-parameter
+% bifurcation diagrams.
+%% Code for 2-parameter bifurcation analyses of SN1 and SN3
 % Run following script to get coordinates of saddle nodes in Fig 2A
 clear;clc
 run ..\Figure2\Manuscript_Fig2A
@@ -19,7 +25,7 @@ index_2p = readtable('index_2p_SN23.xlsx','Sheet', 'Indices');
 ix2p = table2array(index_2p(:,1:4));
 %% Read data obtained from 2-p bifurcation on SN1
 % SN was originally SN2 but later changed to SN1
-% folder is thus named after SN2 rather than SN1
+% Folder is thus named after SN2 rather than SN1
 
 mainpar= "kYTup0";
 cd rawdata_2p_SN2
@@ -37,9 +43,7 @@ SN3_data = dir('*.txt');
 SN3_data =  SN3_data(idx);
 SN3 = readcontents(SN3_data);
 cd ..
-%%
-% cd ..\FinalizedFigures\2p_bifurcation
-% filetype = ".png";
+%% Plot SN1 and SN3 2-parameter bifurcation diagrams
 
 % Specify parameters used for 2-parameter bifurcation
 index = [5,6,7,8,16,17,20,21,9,10]; 
@@ -61,7 +65,9 @@ for i = [5, 7, 9]
     ylim([0 .02])
 
 end
-
+figure(5);title('Figure 4D');
+figure(7);title('Figure 4E');
+figure(9);title('Figure 3D');
 %% Functions
 % Read contents of folder(data and file name)
 function C = readcontents(folder)

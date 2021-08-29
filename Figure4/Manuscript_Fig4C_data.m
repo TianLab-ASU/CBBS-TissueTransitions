@@ -1,3 +1,14 @@
+% This script produces the files required to run the R script, which
+% generates Fig 4C. The files contain the percentage change in the
+% saddle nodes after varying each of the parameters through a 15% increase 
+% and decrease of their original values in the standard parameter set.
+
+% This script requires the coordinates of the saddle nodes in Fig 2A, which 
+% is why the file is used to generate it is run in this script. It also requires
+% the 1-parameter bifurcation data exported from Oscill8. This data is obtained by
+% varying each of the parameters through a 15% increase and decrease of
+% their original values in the standard parameter set. 
+
 %% Get coordinates of saddle nodes as in Fig 2A
 clear;clc
 run ..\Figure2\Manuscript_Fig2A
@@ -41,7 +52,7 @@ Q = Q(sepindex,:); %separate by FBL
 %% Calculate percentage change for saddle nodes
 
 % Calculate percentage change by dividing by original x-coordinate of SNs
-Percentages = (Q-pts(1,:))./pts(1,:); % *100 to get actual percentage
+Percentages = (Q-pts(1,:))./pts(1,:); % Multiply by 100 to get actual percentage
 
 Pern = Percentages(1:2:end,:); % Get percentage changes of saddle nodes when parameter was decreased
 Perp = Percentages(2:2:end,:); % Get percentage changes of saddle nodes when parameter was increased

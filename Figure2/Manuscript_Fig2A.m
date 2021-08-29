@@ -1,7 +1,9 @@
-% This code outputs a figure with the 1-parameter bifurcation diagram as
-% observed in Fig 2A in the manuscript. The script requires the 1-parameter
-% bifurcation data exported from Oscill8, which has been placed in the
-% folder "NFL_bifurcationdata". 
+% This code generates the 1-parameter bifurcation diagram as
+% observed in Fig 2A in the manuscript. 
+
+% The script requires the 1-parameter bifurcation data exported from 
+% Oscill8 and where kYTup0 was the bifurcation parameter. This data 
+% has been placed in the folder "NFL_bifurcationdata". 
 
 %% Import data for bifurcation diagram
 clear;clc;close all
@@ -59,7 +61,7 @@ f2 = fill(rx4, ry, 'yellow',rx5, ry, 'r');
 alpha(f2, .3);
 
 legend([d1, h1, t1],'Degeneration', 'Homeostasis','Tumorigenesis','Location','best')
-
+title('Figure 2A')
 %% Functions
 % Function below finds the saddle nodes of the bifurcation diagrams
 function Coord = findchange(file)

@@ -1,8 +1,12 @@
-% This script generates Fig 2 in the supplementary material. It uses the data 
-% from the stochastic simulations in which the concentrations of each of the 
-% proteins and the time values were saved. The plots display the dynamics 
-% of YAP/TAZ, SIRT1, and NOTCH to show the stochastic transitions from the
-% homeostatic state to the degeneration or tumorigenic states
+% This script generates Fig 2 in the supplementary material.
+% The plots display the dynamics of YAP/TAZ, SIRT1, and NOTCH to show 
+% the stochastic transitions from the homeostatic state to the 
+% degeneration or tumorigenic states
+
+% This script requires the data from the simulations in which the 
+% numbers of each of the proteins and the time values were saved. These
+% simulations only included intrinsic noise by using the Tau-leap-based
+% Gillespie algorithm. 
 %% Import data to plot Stochastic Transitions to Disease States
 clear;clc;close all;
 load('SI_taufulldata_Fig2.mat')

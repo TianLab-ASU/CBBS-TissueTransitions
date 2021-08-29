@@ -1,9 +1,12 @@
-% This script generates Figures 3E in the manuscript. This
-% script requires the coordinates of the saddle nodes, thus the script for
-% Fig 2A was run. In addition, this script requires the 2-parameter
-% bifurcation data for saddle nodes(SNs) 2 and 4 exported from Oscill8. The
-% 2-parameter bifurcation diagram plotted has the 2nd bifurcation parameter
-% as kYTup3.
+% This script generates Figures 3D in the manuscript. The
+% 2-parameter bifurcation diagram plotted has kYTup0 as the 1st bifurcation
+% parameter and kYTup3 as the 2nd bifurcation parameter. 
+
+% This script requires the coordinates of the saddle nodes, thus the script for
+% Fig 2A was run. It requires the 2-parameter bifurcation data for saddle 
+% nodes(SNs) 2 and 4 exported from Oscill8. The Excel tables imported
+% contains the indices used to plot specific sections of the 2-parameter
+% bifurcation diagrams.
 %% Code for 2-parameter bifurcation analyses of SN2 and SN4
 % Run following script to get coordinates of saddle nodes in Fig 2A
 run ..\Figure2\Manuscript_Fig2A
@@ -59,7 +62,7 @@ legend('SN2', 'SN4')
  
 xlim([.85 1.15])
 ylim([0 .02])
- 
+title('Figure 3D')
 %% Functions
 % Read contents of folder(data and file name)
 function C = readcontents(folder)

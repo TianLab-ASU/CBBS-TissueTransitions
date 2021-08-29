@@ -1,8 +1,10 @@
-% This script outputs three figures, Fig 2B, 2C, and 3A as seen in the
+% This script generates three figures, Fig 2B, 2C, and 3A as seen in the
 % manuscript. All three figures include the [L]- and [YTup]-nullclines but
-% with different values of kYTup0. The script to generate Fig 2A is ran to obtain
-% the coordinates of the saddle nodes, which are later used to determine the
-% specific kYTup0 values for each figure
+% with different values of kYTup0. 
+
+% The script used to generate Fig 2A is ran to obtain the coordinates of 
+% the saddle nodes, which are later used to determine the specific kYTup0 
+% values for each figure.
 
 %% Get kYTup0 value for Fig 3A
 % kYTup0 is in the middle of the monostable homeostatic region
@@ -46,7 +48,7 @@ xlim([0 3])
 ylim([0 3])
 ylabel('[YT_u_p]')
 xlabel('[L]')
-
+title('Figure 3A')
 %% Plot examples of trajectories from different starting points 
 % Create meshgrid to use for streamline
 [L1, YTup1] = meshgrid(0:0.01:3,0:0.01:3);
@@ -109,6 +111,7 @@ xlim([0 3])
 ylim([0 3])
 ylabel('[YT_u_p]')
 xlabel('[L]')
+title('Figure 2B')
 %% Plot examples of trajectories from different starting points 
 % Create meshgrid to use for streamline
 [L1, YTup1] = meshgrid(0:0.01:3,0:0.01:3);
@@ -169,7 +172,7 @@ xlim([0 3])
 ylim([0 3])
 ylabel('[YT_u_p]')
 xlabel('[L]')
-
+title('Figure 2C')
 %% Plot examples of trajectories from different starting points 
 % Create meshgrid to use for streamline
 [L1, YTup1] = meshgrid(0:0.01:3,0:0.01:3);

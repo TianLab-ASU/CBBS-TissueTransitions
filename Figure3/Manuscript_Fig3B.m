@@ -1,7 +1,10 @@
 % This script plots the dynamics of [YTup], as seen in Fig 3B of the
-% manuscript. The scrip used to generate Fig 2A is run to obtain the
-% coordinates of the saddle nodes. These coordinates are used to specify
-% the value for kYTup0. 
+% manuscript. 
+
+% The script used to generate Fig 2A is run to obtain the
+% coordinates of the saddle nodes. These coordinates are then used to 
+% calculate the specific value of kYTup0 used in plotting the [YTup]
+% dynamics.
 
 %% Get kYTUp0 value for Fig 3B
 clear;clc;
@@ -38,5 +41,5 @@ xlabel('Time')
 ylabel('[YT_u_p]')
 legend
 h = figure(1);
- 
+title('Figure 3B')
 

@@ -1,9 +1,12 @@
-% This scrip is used to generate Fig 3C in the manuscript. It requires the
-% 1-paremeter bifurcation data exported from Oscill8. The script plots the
-% bifurcation diagrams for several values of kYTup3 to determine its effect
-% on the system and each of the tissue states
+% This script is used to generate Fig 3C in the manuscript. The script 
+% plots the 1-bifurcation diagrams for several values of kYTup3 to 
+% determine its effect on the system and each of the tissue states. These
+% bifurcation diagrams use kYTup0 as the bifurcation parameter.
 
-%% Change directory to get bifurcation diata
+% The script requires the 1-parameter bifurcation data exported from 
+% Oscill8, where kYTup0 was the bifurcation parameter. 
+
+%% Change directory to get bifurcation data
 cd ..\Figure2\NFL_bifurcationdata
 clear;clc;
 %% Plot bifurcation diagram for varied values of kYTup3
@@ -45,13 +48,10 @@ for i = 1:length(kYTup3)
 
     legend([d1, h1, t1],'Degeneration', 'Homeostasis','Tumorigenesis')
     legend('Location','best')
-
-%     ran12(i) = abs(pts(1,1)-pts(1,2));
-%     ran34(i) = abs(pts(1,3)-pts(1,4));
-%     ranhomeo(i) = abs(pts(1,1)-pts(1,4));
 end
+title('Figure 3C')
 cd ../../Figure3_4
-% ranhomeo(end)-ranhomeo(4) 
+
 %% Functions
 % Function below finds the saddle nodes of the bifurcation diagrams
 function Coord = findchange(file)

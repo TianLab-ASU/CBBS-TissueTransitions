@@ -2,6 +2,11 @@
 % noise
 % Certain sections or lines were commented out. These can be used to get
 % stochastic simulations when time values don't need to be saved
+
+% This script requires the coordinates of the saddle nodes in Fig 2A, which
+% is why the script is ran in the first section. The coordinates are then
+% used to calculate the value of kYTup0 used as the initial condition for
+% the simulations. 
 %% Get position of saddle nodes
 clc; close all;
 global oval
@@ -20,7 +25,8 @@ kYTup0_vals = [0.004, .005, .007, 0.012, 0.014];
 Conc = {};
 
 %% Define variables when running file to get data for all kYTup0 values
-% Use for stochastic simulations where time values don't need saving
+% Use for stochastic simulations where time values don't need saving.
+% Section above should be commented out if this section is uncommented.
 % Conc(1,:) = {"L","YTup","YTp","S","N"}; 
 % kYTup0_vals = [0:0.001:0.015];
 
@@ -60,7 +66,7 @@ for j = 1:length(kYTup0_vals)
         
         j; i;
         tic
-        %Uncomment lines 71 and 83 to include extrinsic noise through parameter variation
+        %Uncomment following 13 lines to include extrinsic noise through parameter variation
 %         Para1=Para0.*(1-NoiseAmpli+2*NoiseAmpli*NoisePara(i,:));
 %         
 %         kL1=Para1(1); kL2=Para1(2); JL=Para1(3); kL3=Para1(4);
@@ -79,14 +85,16 @@ for j = 1:length(kYTup0_vals)
         
         toc 
         
-         % Use next line when needing to save time values
+         % Use next line when needing to save time values, otherwise
+         % comment it out. 
           vals(i,:) = {ytau, ttau}; 
 
     end
     sstotaltime =toc(ssimtimestart);
 %         Use next line when time values don't need to be saved
 %         Conc(j,:) = {L, YTup, YTp, S, N}; 
-    % Use next line when time values need to be saved
+    % Use next line when time values need to be saved. Otherwise, comment
+    % it out. 
     Conc{j, 1}=vals; 
     
 

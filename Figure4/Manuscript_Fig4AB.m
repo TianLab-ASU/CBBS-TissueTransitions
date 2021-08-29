@@ -1,4 +1,13 @@
+% This script generates Figs 4A-B as seen in the manuscript. The figures
+% plot the fold change in the saddle nodes after varying the parameters by 
+% a 15% increase or decrease of their original values in the standard 
+% parameter set. 
 
+% The script requires the coordinates of the saddle nodes as seen in Fig
+% 2A, thus the file to generate that figure is run first. It also requires
+% the 1-parameter bifurcation data exported from Oscill8. This data is obtained by
+% varying each of the parameters through a 15% increase and decrease of
+% their original values in the standard parameter set. 
 %% Get coordinates of saddle nodes as in Fig 2A
 clear;clc
 run ..\Figure2\Manuscript_Fig2A
@@ -25,7 +34,7 @@ end
 %% Calculate fold change for saddle nodes
 Q = zeros(length(C),length(pts));
 
-%Outputs Q as matrix containing x-value of SNs
+%Outputs Q as matrix containing x-coordinate of SNs
 for j = 1:length(C) 
   W = D{j};
   Q(j,1:length(W(1,:))) = W(1,:);
@@ -48,6 +57,7 @@ Qp = Q(2:2:end,:); % Contains fold changes of SNs caused by parameter increase
 fig(2) = figure(2);
 xline(1); hold on;
 yline(1); hold on;
+title('Figure 4A')
 % Plot fold changes of SNs caused by parameter decrease
 g1 = scatter(Qn(:,1),Qn(:,3),'o');hold on; 
 
@@ -68,6 +78,7 @@ box on;
 fig(3) = figure(3);
 xline(1); hold on;
 yline(1); hold on;
+title('Figure 4B')
 % Plot fold changes of SNs caused by parameter decrease
 g4 = scatter(Qn(:,2),Qn(:,4),'o');hold on;
 
