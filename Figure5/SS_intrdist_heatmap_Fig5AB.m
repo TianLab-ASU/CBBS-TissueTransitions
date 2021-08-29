@@ -72,7 +72,7 @@ set(gcf, 'Position', [100 450 1750 350])
 % caxis([0 max(max(N))])
 cb.Label.String = 'Cell Count';
 cb.Label.FontSize = 12;
-
+title(t1, "Figure 5A")
 %% Heatmap for YTup vs N
 % Create grid
 Nvbins = linspace(0, max(max(C2)), bsize);
@@ -97,5 +97,5 @@ set(gcf, 'Position', [100 50 1750 350])
 
 cb.Label.String = 'Cell Count';
 cb.Label.FontSize = 12;
-
+title(t2, "Figure 5A")
  
