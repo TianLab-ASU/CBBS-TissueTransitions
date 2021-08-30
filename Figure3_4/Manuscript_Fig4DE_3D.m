@@ -31,16 +31,20 @@ mainpar= "kYTup0";
 cd rawdata_2p_SN2
 SN1_data = dir('*.txt');
 
-[q,idx]=sort([SN1_data.datenum]);
+idx =[8, 3, 9, 4, 7, 2, 6, 1, 10, 5];
+% [q,idx]=sort([SN1_data.datenum]);
 SN1_data =  SN1_data(idx);
+
 SN1 = readcontents(SN1_data);
 cd ..
 %% Read data obtained from 2-p bifurcation on SN3
 cd rawdata_2p_SN3
 SN3_data = dir('*.txt');
 
-[q,idx]=sort([SN3_data.datenum]);
+idx =[8, 3, 9, 4, 7, 2, 6, 1, 10, 5];
+% [q,idx]=sort([SN3_data.datenum]);
 SN3_data =  SN3_data(idx);
+
 SN3 = readcontents(SN3_data);
 cd ..
 %% Plot SN1 and SN3 2-parameter bifurcation diagrams
