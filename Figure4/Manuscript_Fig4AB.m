@@ -16,9 +16,15 @@ close
 cd rawdata_1p_parsent
 myfolder = dir('*.txt');
 
-[q,idx]=sort([myfolder.datenum]);
+idx = [16, 15, 18, 17, 2, 1, 20, 19, 36, 35, ...
+    8, 7, 38, 37, 10, 9, 40, 39, 12, 11, ...
+    42, 41, 14, 13, 44, 43, 34, 33, 28, 27, ...
+    30, 29, 6, 5, 32, 31, 22, 21, 24, 23, ...
+    4, 3, 26, 25];
+
 myfolder =  myfolder(idx);
 
+%%
 for k = 1:length(myfolder) % Iterates through each file in folder
     % Get file names
     e(k,1) = convertCharsToStrings(myfolder(k).name);
