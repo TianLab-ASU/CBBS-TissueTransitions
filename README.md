@@ -10,7 +10,7 @@ Each folder contains code and folders of data files(.txt) used to generate the f
 
 Due to the maximum limit size of files allowed in a GitHub repository, we placed 3 of our data files(.mat) within a [Dropbox folder](https://www.dropbox.com/sh/d9hjvfoyopexisl/AABxIIQWhNjq4CSPA_OfUC7ta?dl=0). Once these files are downloaded from this Dropbox folder, they should be placed within the "/Figure5" folder for the scripts to properly run. 
 
-## Downloading Repo
+## Downloading Repository
 This GitHub repository may be either downloaded as a .zip folder or using "git clone". 
 
 
